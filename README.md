@@ -18,10 +18,12 @@ library(joincheckr)
 ```
 
 ## Functions
+Regarding nomenclature, the functions arguments are distinguished between "data" and "ID". A request for "data_x" is a request for your first data frame i.e. the data frame the join will be based on. "data_y" is subsequently the other. Same principle goes for the "ID" where we enter the common join ID of df x or y. **All functions should be fully pipeable with tidyverse functions**.
+
 Before we get to the functions, lets prepare 2 example datasets: data1 and data2.
 
 ```r
-datagen <- function(libname, pkgname){
+datagen <- function(){
   data1 <<- data.frame(ID = c(1,1, 2, 3, 4),
                        GroupX = c("A", "A", "A", "B", "C"),
                        VarX = c(1, 10,100, 1000, 10000))
@@ -32,7 +34,7 @@ datagen <- function(libname, pkgname){
   
   
 }
-datagen
+datagen()
 ```
 Which assigns data1 and data2 to the global environment.
 data1:
@@ -55,5 +57,35 @@ data2:
 4  3      C  2000
 5  5      D 20000
 ```
+
+### get_join_cols()
+This function returns a dataframe where are columns of two entered dataframes are listed which would be subject to a join.
+
+```r
+get_join_cols(data_x = data1, data_y = data2)
+```
+```r
+    cols origin
+1     ID data_x
+2 GroupX data_x
+3   VarX data_x
+4     ID data_y
+5 GroupY data_y
+6   VarY data_y
+```
+### get_join_count()
+This function counts how many times an ID is present in a data frame and returns a tibble.
+
+> get_join_count(data_x=  data1,ID_x = data1$ID)
+# A tibble: 4 x 2
+  `data1$ID` join_count
+       <dbl>      <int>
+1          1          2
+2          2          1
+3          3          1
+4          4          1
+## Example
+
+
 ## Acknowledgements
 A big thank you to Joshua de la Bruere (Twitter: @delaBJL) for the advice on how to write pipeable functions and help de-bugging the package!
