@@ -1,7 +1,7 @@
 # joincheckr
 R package with functions to get information on left join between 2 data frames
 
-![joincheckr_hex](https://user-images.githubusercontent.com/65813696/105766734-63bda380-5f5a-11eb-94bb-6f78f021e805.png)
+![joincheckr_hex](https://user-images.githubusercontent.com/65813696/105766734-63bda380-5f5a-11eb-94bb-6f78f021e805.png =15x15)
 
 **Test Data** (Will generate data1 and data2 in the global environment
 ```
