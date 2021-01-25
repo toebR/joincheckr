@@ -1,3 +1,7 @@
+ <!-- badges: start -->
+  [![R-CMD-check](https://github.com/toebR/joincheckr/workflows/R-CMD-check/badge.svg)](https://github.com/toebR/joincheckr/actions)
+  <!-- badges: end -->
+
 # joincheckr
 An R package with functions to get information on a left join between 2 data frames.
 (Feel free to create pull requests, open issues etc. Contributions are very welcome)
