@@ -21,7 +21,7 @@ get_join_rows_n <- function(data_x, ID_x, ID_y) {
 
   suppressWarnings(
   data_x %>%
-    dplyr::group_by(join_index) %>%
+    dplyr::group_by(.data$join_index) %>%
     dplyr::count() -> n_sum
 )
   return(n_sum)

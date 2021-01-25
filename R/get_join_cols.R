@@ -12,11 +12,11 @@ get_join_cols <- function(data_x, data_y) {
 
   cols_x <- data.frame(colnames(data_x)) %>%
     dplyr::mutate(origin = "data_x") %>%
-    dplyr::rename(cols = colnames.data_x.)
+    dplyr::rename(cols = .data$colnames.data_x.)
 
   cols_y <- data.frame(colnames(data_y)) %>%
     dplyr::mutate(origin = "data_y") %>%
-    dplyr::rename(cols = colnames.data_y.)
+    dplyr::rename(cols = .data$colnames.data_y.)
 
   cols <- rbind(cols_x, cols_y)
 
