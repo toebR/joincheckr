@@ -60,7 +60,7 @@ data2:
 ```
 
 ### get_join_cols()
-This function returns a dataframe where are columns of two entered dataframes are listed which would be subject to a join.
+This function returns a dataframe where columns of two entered dataframes are listed which would be subject to a join.
 
 ```r
 get_join_cols(data_x = data1, data_y = data2)
