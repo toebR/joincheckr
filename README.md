@@ -128,7 +128,6 @@ library(dplyr)
 
 get_join_rowindex(data1, data1$ID, data2$ID) %>%
   filter(join_index == 1) #added filter function
-
 ```
 Result:
 ```r
