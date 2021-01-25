@@ -12,12 +12,12 @@
 # function that generates a join count for each ID
 
 get_join_count <- function(data_x, ID_x) {
-
+  suppressWarnings(
   data_x %>%
     dplyr::group_by({{ID_x}}) %>%
     dplyr::summarise(n = dplyr::n()) %>%
     dplyr::rename(join_count = n) -> join_c
-
+)
   return(join_c)
 
 }
