@@ -4,7 +4,7 @@
 
 # joincheckr
 An R package with functions to get information on a left join between 2 data frames.
-(Feel free to create pull requests, open issues etc. Contributions are very welcome)
+Feel free to create pull requests, open issues etc. Contributions are very welcome.
 
 
 <img src="https://user-images.githubusercontent.com/65813696/105766734-63bda380-5f5a-11eb-94bb-6f78f021e805.png" width="400" height="461" align = "right" />
